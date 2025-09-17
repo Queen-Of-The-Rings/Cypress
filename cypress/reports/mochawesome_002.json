@@ -1,0 +1,136 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-09-17T16:21:08.928Z",
+    "end": "2025-09-17T16:21:09.615Z",
+    "duration": 687,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "36da9e77-1f6e-468f-bb46-ad8dd01c761d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\orangehrm-login.cy.js",
+      "file": "cypress\\e2e\\orangehrm-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2f3402f-1bfe-4829-8e07-9e43dad76ca8",
+          "title": "OrangeHRM Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successful login with valid credentials",
+              "fullTitle": "OrangeHRM Login Tests successful login with valid credentials",
+              "timedOut": null,
+              "duration": 387,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/dashboard');\ncy.get('.oxd-topbar-header-title').should('contain', 'Dashboard');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/web/index.php/auth/login\n\nWe failed looking for this file at the path:\n\n/testing/Automation_Cypress/web/index.php/auth/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/web/index.php/auth/login\n\nWe failed looking for this file at the path:\n\n/testing/Automation_Cypress/web/index.php/auth/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at <unknown> (http://localhost:62941/__cypress/runner/cypress_runner.js:134982:76)\n    at visitFailedByErr (http://localhost:62941/__cypress/runner/cypress_runner.js:134552:12)\n    at <unknown> (http://localhost:62941/__cypress/runner/cypress_runner.js:134965:13)\n    at tryCatcher (http://localhost:62941/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:62941/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:62941/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:62941/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:62941/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:62941/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:62941/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:62941/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:62941/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://automation_cypress/./cypress/e2e/orangehrm-login.cy.js:3:3)",
+                "diff": null
+              },
+              "uuid": "e1957699-b1e3-40e3-bf4b-02d4a357e498",
+              "parentUUID": "d2f3402f-1bfe-4829-8e07-9e43dad76ca8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "failed login with invalid credentials",
+              "fullTitle": "OrangeHRM Login Tests failed login with invalid credentials",
+              "timedOut": null,
+              "duration": 194,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('InvalidUser');\ncy.get('input[name=\"password\"]').type('InvalidPass');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.oxd-alert-content').should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/web/index.php/auth/login\n\nWe failed looking for this file at the path:\n\n/testing/Automation_Cypress/web/index.php/auth/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/web/index.php/auth/login\n\nWe failed looking for this file at the path:\n\n/testing/Automation_Cypress/web/index.php/auth/login\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at <unknown> (http://localhost:62941/__cypress/runner/cypress_runner.js:134982:76)\n    at visitFailedByErr (http://localhost:62941/__cypress/runner/cypress_runner.js:134552:12)\n    at <unknown> (http://localhost:62941/__cypress/runner/cypress_runner.js:134965:13)\n    at tryCatcher (http://localhost:62941/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:62941/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:62941/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:62941/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:62941/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:62941/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:62941/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:62941/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:62941/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://automation_cypress/./cypress/e2e/orangehrm-login.cy.js:11:3)",
+                "diff": null
+              },
+              "uuid": "8bb89aa1-7271-40c4-a2a2-06c397dff3ab",
+              "parentUUID": "d2f3402f-1bfe-4829-8e07-9e43dad76ca8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e1957699-b1e3-40e3-bf4b-02d4a357e498",
+            "8bb89aa1-7271-40c4-a2a2-06c397dff3ab"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "OrangeHRM Test Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
