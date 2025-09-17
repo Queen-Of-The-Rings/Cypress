@@ -11,7 +11,7 @@ describe('OrangeHRM Login Tests', () => {
     cy.get('input[name="password"]').type('admin123');
     cy.get('button[type="submit"]').click();
     cy.url().should('include', '/dashboard');
-    cy.get('.oxd-topbar-header-title').should('contain', 'Dashboards');
+    cy.get('.oxd-topbar-header-title').should('contain', 'Dashboard');
   });
 
   it('failed login with invalid credentials', () => {
