@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-18T04:25:16.741Z",
+    "end": "2025-09-18T04:25:32.176Z",
+    "duration": 15435,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6759da38-1eca-45cd-97f2-73c7a419dfe5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\orangehrm-login.cy.js",
+      "file": "cypress\\e2e\\orangehrm-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "128ba552-7775-4fa9-9227-646c5b10aed5",
+          "title": "OrangeHRM Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successful login with valid credentials",
+              "fullTitle": "OrangeHRM Login Tests successful login with valid credentials",
+              "timedOut": null,
+              "duration": 7135,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/dashboard');\ncy.get('.oxd-topbar-header-title').should('contain', 'Dashboard');",
+              "err": {},
+              "uuid": "20f634ce-2419-483d-ad7f-c0624e44c18a",
+              "parentUUID": "128ba552-7775-4fa9-9227-646c5b10aed5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "failed login with invalid credentials",
+              "fullTitle": "OrangeHRM Login Tests failed login with invalid credentials",
+              "timedOut": null,
+              "duration": 5008,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('InvalidUser');\ncy.get('input[name=\"password\"]').type('InvalidPass');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.oxd-alert-content').should('be.visible');",
+              "err": {},
+              "uuid": "726a342c-234c-4e55-9b78-38565a707329",
+              "parentUUID": "128ba552-7775-4fa9-9227-646c5b10aed5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20f634ce-2419-483d-ad7f-c0624e44c18a",
+            "726a342c-234c-4e55-9b78-38565a707329"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12143,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "reportPageTitle": "OrangeHRM Test Report",
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
